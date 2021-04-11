@@ -1,0 +1,8 @@
+beautifulsoup4==4.9.1
+bs4==0.0.1
+Django==2.1.5
+django-debug-toolbar==2.2
+djangorestframework==3.11.0
+fake-useragent==0.1.11
+progress==1.5
+requests==2.22.0
