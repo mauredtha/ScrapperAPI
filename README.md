@@ -267,8 +267,8 @@ the response is : Success Scrapping Data
 First Create and start your virtual environment (I'm Using Windows Environment): Clone or download this repository
 
 ```
-$ py -m venv project-name
-$ project-name\Scripts\activate.bat
+$ py -m venv news-scrapping
+$ news-scrapping\Scripts\activate.bat
 $ pip install -r requirements.txt
 $ python manage.py runserver
 ```
