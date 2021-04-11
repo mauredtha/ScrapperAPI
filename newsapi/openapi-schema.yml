@@ -1,0 +1,136 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /:
+    get:
+      operationId: listHeadlines
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Headline'
+          description: ''
+      tags:
+      - ''
+  /news/{id}/:
+    get:
+      operationId: retrieveHeadline
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this headline.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Headline'
+          description: ''
+      tags:
+      - news
+    put:
+      operationId: updateHeadline
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this headline.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Headline'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Headline'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Headline'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Headline'
+          description: ''
+      tags:
+      - news
+    patch:
+      operationId: partialUpdateHeadline
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this headline.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Headline'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Headline'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Headline'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Headline'
+          description: ''
+      tags:
+      - news
+    delete:
+      operationId: destroyHeadline
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this headline.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - news
+components:
+  schemas:
+    Headline:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+          maxLength: 200
+        category:
+          type: string
+          nullable: true
+          maxLength: 200
+        url:
+          type: string
+      required:
+      - title
+      - url
