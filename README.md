@@ -269,7 +269,7 @@ First Create and start your virtual environment (I'm Using Windows Environment):
 ```
 $ py -m venv project-name
 $ project-name\Scripts\activate.bat
-$ pip install -r requirement.txt
+$ pip install -r requirements.txt
 $ python manage.py runserver
 ```
 
