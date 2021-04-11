@@ -4,7 +4,7 @@ A News Scrapper API for scraping news headlines, in this case the original websi
 # Endpoint Description
 This below is all endpoint that have been created and one endpoint accept search keyword(s) to search the news headlines and return a list of news headlines details as a response.
 
-# [GET] / (Show the API Schema)
+## [GET] / (Show the API Schema)
 
 example : http://localhost:8000/
 if success, then the response is :
@@ -30,7 +30,7 @@ Vary: Accept
       - multipart/form-data
 ```
 
-# [GET] /news (Show all list news headlines)
+## [GET] /news (Show all list news headlines)
 example : http://localhost:8000/news/
 if success, then the response is :
 
@@ -61,7 +61,7 @@ Vary: Accept
 }
 ```
 
-# [POST] /news/add (Add a single news headlines)
+## [POST] /news/add (Add a single news headlines)
 example : http://localhost:8000/news/add
 ```
 Body Request (JSON) :
@@ -104,7 +104,7 @@ Vary: Accept
     ]
 }
 ```
-# [GET] /news/?param= (Get list news that contain search keyword from param)
+## [GET] /news/?param= (Get list news that contain search keyword from param)
 example : http://localhost:8000/news/?search=vaccine
 
 if success, then the response is :
@@ -152,7 +152,7 @@ Vary: Accept
 }
 ```
 
-# [GET] /news/:id (Get a single news headlines)
+## [GET] /news/:id (Get a single news headlines)
 example : http://localhost:8000/news/2
 if success, then the response is :
 ```
@@ -187,7 +187,7 @@ Vary: Accept
     "errorMessage": "No Content"
 }
 ```
-# [PUT] /news/:id (Update a single news headlines)
+## [PUT] /news/:id (Update a single news headlines)
 example : http://localhost:8000/news/1
 ```
 Body Request (JSON) :
@@ -237,7 +237,7 @@ Vary: Accept
     "errorMessage": "Terjadi Kesalahan"
 }
 ```
-# [DELETE] /news/:id (Delete a single news headlines)
+## [DELETE] /news/:id (Delete a single news headlines)
 example : http://localhost:8000/news/1
 ```
 Body Request (JSON) :
@@ -259,7 +259,7 @@ Vary: Accept
     "errorMessage": ""
 }
 ```
-# [GET] /scrape (Scrapping Website)
+## [GET] /scrape (Scrapping Website)
 example : http://localhost:8000/scrape/
 the response is : Success Scrapping Data
 
@@ -274,7 +274,13 @@ $ python manage.py runserver
 ```
 
 
-
 # How to test the API
+If you want to get unit testing of the endpoint that have been create, then you can just run this command :
+```
+$ python manage.py test
+```
+If you want to test the API running well or not, after run the server ```python manage.py runserver``` , you'll able to test the API directly because Django Rest Framework is Browsable, or you can test the API using Postman.
 
+Here the link of documentation that contain API testing result : 
+https://docs.google.com/document/d/1EX8pHxlHB4EC3EDC7aP1_gib18QjoKZIv9eKH3tgRXk/edit?usp=sharing
 
